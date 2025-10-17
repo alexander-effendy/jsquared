@@ -1,10 +1,27 @@
-import Logo from "../assets/logo.svg";
+import MaxWidthWrapper from "@/components/general/MaxWidthWrapper";
+import Footer from "@/components/home/Footer";
+import ImageSection from "@/components/home/ImageSection";
+import Navbar from "@/components/home/Navbar";
+import Words from "@/components/home/Words";
+import TeamSection from "@/components/home/TeamSection";
+import FooterSection from "@/components/home/FooterSection";
 
 const Home = () => {
   return (
-    <div className="w-screen h-screen bg-black text-white text-2xl flex flex-col justify-center items-center gap-5">
-      <section className="border-[1px] border-stone-500"><img src={Logo} alt="JSquared Logo" className="size-50" /></section>
-      <span className="font-thin">COMING SOON</span>
+    <div className="w-full flex flex-col bg-[#131313] soft-scrollbar-right overflow-x-hidden h-screen">
+      <Navbar />
+      <MaxWidthWrapper>
+        <div className="flex flex-col gap-5 text-2xl">
+          <Words />
+          <ImageSection />
+          <ImageSection />
+          <ImageSection />
+          <ImageSection />
+          <TeamSection />
+        </div>
+      </MaxWidthWrapper>
+      <FooterSection />
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,17 @@
+#image-track {
+  display: flex;
+  gap: 2vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  animation: scroll 40s linear infinite;
+}
+
+#image-track > .image {
+  width: 35vmin;
+  height: 40vmin;
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+}

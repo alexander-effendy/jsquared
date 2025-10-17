@@ -1,0 +1,72 @@
+.hide-scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* soft the scrollbar track to create a single line effect */
+.soft-scrollbar {
+  direction: rtl;
+  box-sizing: border-box
+}
+
+.soft-scrollbar > * {
+  direction: ltr;
+  text-align: left;
+}
+
+.soft-scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.soft-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(29, 88, 133, 0.4);
+  border-radius: 30px;
+}
+
+/* soft the scrollbar track */
+.soft-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.soft-scrollbar-padding {
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+.soft-scrollbar-padding > * {
+  direction: ltr;
+  text-align: left;
+}
+
+.soft-scrollbar-padding::-webkit-scrollbar {
+  width: 3px;
+}
+
+.soft-scrollbar-padding::-webkit-scrollbar-thumb {
+  background-color: rgba(29, 88, 133, 0.4);
+  border-radius: 30px;
+}
+
+.soft-scrollbar-right > * {
+  direction: ltr;
+  text-align: left;
+}
+
+.soft-scrollbar-right::-webkit-scrollbar {
+  width: 5px;
+}
+
+.soft-scrollbar-right::-webkit-scrollbar-thumb {
+  background-color: rgba(130, 162, 186, 0.4);
+  border-radius: 30px;
+}
+
+/* soft the scrollbar track */
+.soft-scrollbar-right::-webkit-scrollbar-track {
+  background: transparent;
+}
