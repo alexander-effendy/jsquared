@@ -1,5 +1,5 @@
 import MaxWidthWrapper from "@/components/general/MaxWidthWrapper";
-import Footer from "@/components/home/Footer";
+// import Footer from "@/composnents/home/Footer";
 import ImageSection from "@/components/home/ImageSection";
 import Navbar from "@/components/home/Navbar";
 import Words from "@/components/home/Words";
@@ -21,7 +21,7 @@ const Home = () => {
         </div>
       </MaxWidthWrapper>
       <FooterSection />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
