@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -124,4 +125,17 @@ Body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@utility animate-slide {
+  animation: slide 10s linear infinite;
 }

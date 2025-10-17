@@ -5,6 +5,8 @@ import Navbar from "@/components/home/Navbar";
 import Words from "@/components/home/Words";
 import TeamSection from "@/components/home/TeamSection";
 import FooterSection from "@/components/home/FooterSection";
+import SlidingImages from "@/components/home/SlidingImages";
+import ServicesSection from "@/components/home/ServicesSection";
 
 const Home = () => {
   return (
@@ -14,10 +16,9 @@ const Home = () => {
         <div className="flex flex-col gap-5 text-2xl">
           <Words />
           <ImageSection />
-          <ImageSection />
-          <ImageSection />
-          <ImageSection />
+          <ServicesSection />
           <TeamSection />
+          <SlidingImages />
         </div>
       </MaxWidthWrapper>
       <FooterSection />

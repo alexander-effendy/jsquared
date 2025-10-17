@@ -60,7 +60,7 @@ const FooterSection = () => {
 
             {/* Right */}
             <div
-              className={`flex items-end gap-3 ${
+              className={`flex items-end gap-1 ${
                 isMobile ? "justify-center" : "justify-end flex-1"
               }`}
             >

@@ -15,7 +15,7 @@ const ImageSection = () => {
 
   return (
     <div className="border-stone-600 border-[1px] rounded-[5px] w-full overflow-hidden">
-      <div className="p-2 relative" style={{ aspectRatio: isMobile ? "1 / 1.5" : "2 / 1" }}>
+      <div className="p-2 relative" style={{ aspectRatio: isMobile ? "1.5 / 1" : "2 / 1" }}>
         <video
           ref={videoRef}
           src={BoxingVideo}
@@ -23,7 +23,7 @@ const ImageSection = () => {
           loop
           muted
           playsInline
-          className="absolute w-[calc(100%-1rem)] h-[calc(100%-1rem)] top-[0.5rem] left-[0.5rem] object-cover rounded-[3px] filter grayscale"
+          className="absolute w-[calc(100%-2rem)] h-[calc(100%-2rem)] top-[1rem] left-[1rem] object-cover rounded-[5px] filter grayscale"
         />
       </div>
     </div>
