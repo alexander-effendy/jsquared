@@ -1,32 +1,9 @@
-import { useMediaQuery } from "react-responsive";
-import { useEffect, useState } from "react";
 import MaxWidthWrapper from "../general/MaxWidthWrapper";
+import { FaInstagram } from "react-icons/fa6";
 
 const FooterSection = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
-  const [time, setTime] = useState<string>("");
-
-  // Update time every second
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-        timeZone: "Australia/Sydney",
-      };
-      setTime(new Intl.DateTimeFormat("en-AU", options).format(now));
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="bg-[#131313] mt-5 text-white">
+    <div className="bg-black mt-5 text-white">
       {/* Top description section */}
       <MaxWidthWrapper>
         <section className="py-5 font-light">
@@ -40,35 +17,22 @@ const FooterSection = () => {
         </section>
       </MaxWidthWrapper>
 
-      {/* Bottom footer with time */}
-      <section
-        className="w-full border-t-[1px] border-stone-600 flex items-center"
-        style={{
-          height: isMobile ? "100px" : "70px",
-        }}
-      >
+      {/* Bottom footer */}
+      <section className="w-full border-t-[1px] border-stone-600 flex items-center h-[70px]">
         <MaxWidthWrapper>
-          <div
-            className={`flex w-full ${
-              isMobile
-                ? "flex-col gap-3 text-center"
-                : "justify-between items-center"
-            }`}
-          >
+          <div className="flex w-full justify-between items-center">
             {/* Left */}
-            <div className="text-sm font-thin tracking-widest">©JSQUARED</div>
+            <div className="text-sm font-thin tracking-widest">©JSQUAREDSTUDIOS</div>
 
             {/* Right */}
-            <div
-              className={`flex items-end gap-1 ${
-                isMobile ? "justify-center" : "justify-end flex-1"
-              }`}
+            <a
+              href="https://www.instagram.com/jsquared.studios/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400 transition-colors duration-200"
             >
-              <span className="text-sm font-thin">SYD</span>
-              <span className="text-sm font-thin w-[70px] text-center">
-                {time}
-              </span>
-            </div>
+              <FaInstagram size={20} />
+            </a>
           </div>
         </MaxWidthWrapper>
       </section>
@@ -77,3 +41,12 @@ const FooterSection = () => {
 };
 
 export default FooterSection;
+
+// content
+
+// [ per project ]
+// [ per project ]
+// [ per project ]
+// 
+// sydney thunder
+// creatine

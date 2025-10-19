@@ -12,7 +12,7 @@ const Words = () => {
 
   return (
     <div
-      className={`text-white font-thin ${textSizeClass} leading-relaxed mt-5 mx-auto grid grid-cols-2 gap-4`}
+      className={`text-stone-400 font-thin ${textSizeClass} leading-relaxed mt-5 mx-auto grid grid-cols-2 gap-4`}
     >
       <p>
         We are a Sydney-based creative studio specializing in photography and film.
