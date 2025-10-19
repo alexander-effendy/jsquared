@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import { FiArrowDown } from "react-icons/fi";
 import { client } from "@/lib/SanityClient";
 
 const FirstFrame = () => {
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
+
+  // ✅ Detect mobile width
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   useEffect(() => {
     const fetchVideo = async () => {
@@ -26,7 +30,9 @@ const FirstFrame = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover filter grayscale opacity-70"
+          className={`w-full h-full object-cover opacity-70 ${
+            isMobile ? "" : "filter grayscale"
+          }`}
         />
       ) : (
         <div className="w-full h-full bg-black flex items-center justify-center text-white">

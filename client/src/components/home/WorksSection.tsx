@@ -20,12 +20,9 @@ const WorksSection = () => {
         "imageUrl": image.asset->url,
         "date": publishedAt,
       }`;
-
       const data = await client.fetch(query);
-      console.log(data);
       setWorks(data);
     };
-
     fetchWorks();
   }, []);
 
@@ -35,9 +32,7 @@ const WorksSection = () => {
 
       <section
         className={
-          isMediumScreen
-            ? "grid grid-cols-2 gap-4"
-            : "flex flex-col gap-3"
+          isMediumScreen ? "grid grid-cols-2 gap-4" : "flex flex-col gap-3"
         }
       >
         {works.map((work, i) => (
@@ -46,6 +41,7 @@ const WorksSection = () => {
             image={work.imageUrl}
             business={work.title}
             date={new Date(work.date).toLocaleDateString("en-AU")}
+            isMediumScreen={isMediumScreen}
           />
         ))}
       </section>
@@ -57,6 +53,7 @@ interface WorkFrameProps {
   image: string;
   business: string;
   date: string;
+  isMediumScreen: boolean;
   position?: "bottom-left" | "bottom-right" | "top-left" | "top-right";
 }
 
@@ -65,6 +62,7 @@ const WorkFrame = ({
   business,
   date,
   position = "bottom-left",
+  isMediumScreen,
 }: WorkFrameProps) => {
   const positionClasses = {
     "bottom-left": "bottom-0 left-0 text-left",
@@ -75,14 +73,14 @@ const WorkFrame = ({
 
   return (
     <div className="relative flex flex-col h-[500px] text-sm font-thin group overflow-hidden">
-      {/* Image - grayscale by default, becomes colorful on hover */}
       <img
         src={image}
         alt={business}
-        className="w-full h-full object-cover grayscale brightness-[0.7] transition-all duration-500 group-hover:grayscale-0 group-hover:brightness-100"
+        className={`w-full h-full object-cover brightness-[0.7] transition-all duration-500 group-hover:brightness-100 ${
+          isMediumScreen ? "filter grayscale group-hover:grayscale-0" : ""
+        }`}
       />
 
-      {/* Text overlay with highlight bar on hover */}
       <div
         className={`absolute ${positionClasses[position]} w-full transition-all duration-500`}
       >
