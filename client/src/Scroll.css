@@ -48,7 +48,7 @@
 }
 
 .soft-scrollbar-padding::-webkit-scrollbar-thumb {
-  background-color: rgba(29, 88, 133, 0.4);
+  background-color: rgba(41, 79, 107, 0.4);
   border-radius: 30px;
 }
 
@@ -58,11 +58,11 @@
 }
 
 .soft-scrollbar-right::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 .soft-scrollbar-right::-webkit-scrollbar-thumb {
-  background-color: rgba(74, 90, 103, 0.4);
+  background-color: rgb(63, 63, 59);
   border-radius: 30px;
 }
 
