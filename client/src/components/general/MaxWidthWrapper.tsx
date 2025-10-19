@@ -9,7 +9,7 @@ interface MaxWidthWrapperProps {
 const MaxWidthWrapper = ({ children, className = "", maxWidth = "1500px" }: MaxWidthWrapperProps) => {
   return (
     <div
-      className={`mx-auto w-full px-6 sm:px-8 ${className}`}
+      className={`mx-auto w-full px-2 sm:px-4 ${className}`}
       style={{ maxWidth }}
     >
       {children}
