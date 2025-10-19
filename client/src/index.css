@@ -112,15 +112,12 @@
 }
 
 #root {
-  min-height: 100dvh;
-  padding-bottom: env(safe-area-inset-bottom);
+  min-height: 100dvh; /* dynamic viewport height */
 }
 
-Body {
-  height: 100dvh;
-  width: 100vw;
-  margin: 0rem;
-  overflow: hidden;
+html, body {
+  height: 100%;
+  overflow: auto;
 }
 
 @layer base {
