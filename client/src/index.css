@@ -145,5 +145,5 @@ Body {
   50% { transform: translateY(5px); }
 }
 .animate-bounce-slow {
-  animation: bounce-slow 10s infinite;
+  animation: bounce-slow 2s infinite;
 }

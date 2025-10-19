@@ -6,7 +6,8 @@ import jsquaredLogo from "@/assets/svgs/jsquared.svg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({ maxWidth: 750 });
+  const isMedium = useMediaQuery({ minWidth: 751 });
   const [time, setTime] = useState<string>("");
 
   // Update time every second
@@ -39,7 +40,7 @@ const Navbar = () => {
         />
 
         {/* Center (Desktop only) */}
-        {!isMobile && (
+        {isMedium && (
           <div
             style={{ letterSpacing: "0.1em" }}
             className="flex gap-3 absolute left-1/2 -translate-x-1/2 text-xs text-stone-300  w-[70px] font-thin"
