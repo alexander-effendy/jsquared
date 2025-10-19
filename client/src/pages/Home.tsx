@@ -1,15 +1,15 @@
 import MaxWidthWrapper from "@/components/general/MaxWidthWrapper";
 // import Footer from "@/composnents/home/Footer";
-import ImageSection from "@/components/home/ImageSection";
+// import ImageSection from "@/components/home/ImageSection";
 import Navbar from "@/components/home/Navbar";
 import Words from "@/components/home/Words";
-import TeamSection from "@/components/home/TeamSection";
+// import TeamSection from "@/components/home/TeamSection";
 import FooterSection from "@/components/home/FooterSection";
-import SlidingImages from "@/components/home/SlidingImages";
-import ServicesSection from "@/components/home/ServicesSection";
+// import SlidingImages from "@/components/home/SlidingImages";
+// import ServicesSection from "@/components/home/ServicesSection";
 import WorksSection from "@/components/home/WorksSection";
 import FirstFrame from "@/components/home/FirstFrame";
-import CustomCursor from "@/components/general/CustomCursor";
+// import CustomCursor from "@/components/general/CustomCursor";
 
 const Home = () => {
   return (
