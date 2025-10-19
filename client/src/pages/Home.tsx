@@ -17,7 +17,7 @@ const Home = () => {
       <Navbar />
       {/* <CustomCursor /> */}
       <div
-        style={{ height: "min(100vw, calc(100vh - 50px))" }}
+        style={{ height: "min(100vw, calc(100dvh - 50px))" }}
         className="w-full flex flex-col overflow-x-hidden shrink-0 aspect-square"
       >
         <FirstFrame />

@@ -111,8 +111,13 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+#root {
+  min-height: 100dvh;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
 Body {
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   margin: 0rem;
   overflow: hidden;
